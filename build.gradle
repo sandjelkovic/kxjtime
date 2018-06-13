@@ -10,7 +10,7 @@ buildscript {
 }
 
 group 'com.sandjelkovic'
-version '1.0-SNAPSHOT'
+version '0.0.1-SNAPSHOT'
 
 apply plugin: 'kotlin'
 
@@ -21,6 +21,7 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
+sourceCompatibility = 1.8
 
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"

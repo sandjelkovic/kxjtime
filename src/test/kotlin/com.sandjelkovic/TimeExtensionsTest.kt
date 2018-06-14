@@ -18,49 +18,49 @@ internal class TimeExtensionsTest {
     private val integerNumber: Int = 5
 
     @Test
-    fun getNanoseconds() {
+    fun `Should create nanoseconds Duration from integer`() {
         val duration = integerNumber.nanoseconds
 
         assertTrue(duration == Duration.ofNanos(integerNumber.toLong()))
     }
 
     @Test
-    fun getMilliseconds() {
+    fun `Should create miliseconds Duration from integer`() {
         val duration = integerNumber.milliseconds
 
         assertTrue(duration == Duration.ofMillis(integerNumber.toLong()))
     }
 
     @Test
-    fun getSeconds() {
+    fun `Should create seconds Duration from integer`() {
         val duration = integerNumber.seconds
 
         assertTrue(duration == Duration.ofSeconds(integerNumber.toLong()))
     }
 
     @Test
-    fun getMinutes() {
+    fun `Should create nanoseconds duration from integer`() {
         val duration = integerNumber.minutes
 
         assertTrue(duration == Duration.ofMinutes(integerNumber.toLong()))
     }
 
     @Test
-    fun getHours() {
+    fun `Should create hours Duration from integer`() {
         val duration = integerNumber.hours
 
         assertTrue(duration == Duration.ofHours(integerNumber.toLong()))
     }
 
     @Test
-    fun getDays() {
+    fun `Should create days Duration from integer`() {
         val duration = integerNumber.days
 
         assertTrue(duration == Duration.ofDays(integerNumber.toLong()))
     }
 
     @Test
-    fun get10YearsFromDays() {
+    fun `Should create 10 years of Duration via days from integer`() {
         val duration = (365 * 10).days
 
         assertTrue(duration == Duration.ofDays((365 * 10)))

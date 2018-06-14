@@ -8,7 +8,7 @@ import java.time.Duration
  * @author sandjelkovic
  * @date 14.6.18.
  */
-internal class DurationExtensionsKtTest {
+internal class DurationExtensionsTest {
 
     @Test
     fun `Should negate positive duration via - operator`() {

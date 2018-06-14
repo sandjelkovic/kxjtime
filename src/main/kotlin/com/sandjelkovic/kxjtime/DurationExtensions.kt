@@ -1,4 +1,4 @@
-package com.sandjelkovic
+package com.sandjelkovic.kxjtime
 
 import java.time.Duration
 

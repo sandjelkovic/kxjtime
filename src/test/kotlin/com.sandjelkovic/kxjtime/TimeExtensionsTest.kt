@@ -1,13 +1,7 @@
-package com.sandjelkovic
+package com.sandjelkovic.kxjtime
 
-import days
-import hours
-import milliseconds
-import minutes
-import nanoseconds
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import seconds
 import java.time.Duration
 
 /**

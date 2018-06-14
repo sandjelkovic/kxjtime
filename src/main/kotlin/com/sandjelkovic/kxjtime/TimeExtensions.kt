@@ -1,3 +1,5 @@
+package com.sandjelkovic.kxjtime
+
 import java.time.Duration
 
 inline val Int.nanoseconds: Duration

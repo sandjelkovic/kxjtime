@@ -4,6 +4,7 @@ image: java:8-jdk
 stages:
   - build
   - test
+  - publish
 
 before_script:
 #  - echo `pwd` # debug

@@ -32,7 +32,7 @@ test:
   script:
     - ./gradlew check
 
-build:
+publish:
   stage: publish
   script:
     - ./gradlew publish

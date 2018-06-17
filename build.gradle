@@ -1,5 +1,8 @@
 buildscript {
     ext.kotlin_version = '1.2.41'
+    ext.githost_url = "https://github.com/sandjelkovic/${rootProject.name}"
+    ext.dokka_version = '0.9.9'
+    ext.dokka_sourceMapping = 'tree/master'
 
     repositories {
         mavenCentral()
@@ -8,6 +11,7 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:${dokka_version}"
     }
 }
 
@@ -15,6 +19,7 @@ group 'com.sandjelkovic'
 version '0.0.1-SNAPSHOT'
 
 apply plugin: 'kotlin'
+apply plugin: 'org.jetbrains.dokka'
 
 repositories {
     mavenCentral()
@@ -41,4 +46,36 @@ compileKotlin {
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
+}
+dokka {
+    outputFormat = 'html'
+    outputDirectory = "${project.buildDir}/dokkaHtml"
+
+    linkMapping {
+        dir = rootProject.projectDir.absolutePath
+        url = "$githost_url/${dokka_sourceMapping}"
+        suffix = "#L"
+    }
+
+}
+
+task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
+    outputFormat = "javadoc"
+    outputDirectory = "${project.buildDir}/dokkaJavadoc"
+
+    linkMapping {
+        dir = rootProject.projectDir.absolutePath
+        url = "$githost_url/${dokka_sourceMapping}"
+        suffix = "#L"
+    }
+}
+
+def sourceJar = task('sourceJar', type: Jar) {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+def javadocJar = task('javadocJar', type: Jar, dependsOn: dokka) {
+    from dokkaJavadoc.outputDirectory
+    classifier = 'javadoc'
 }

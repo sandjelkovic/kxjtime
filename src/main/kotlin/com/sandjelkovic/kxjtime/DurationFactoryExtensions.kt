@@ -2,9 +2,15 @@ package com.sandjelkovic.kxjtime
 
 import java.time.Duration
 
+/**
+ * Empty docs
+ */
 inline val Int.nanoseconds: Duration
     get() = Duration.ofNanos(toLong())
 
+/**
+ * Empty docs
+ */
 inline val Int.milliseconds: Duration
     get() = Duration.ofMillis(toLong())
 

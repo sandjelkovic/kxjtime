@@ -31,3 +31,14 @@ test:
   stage: test
   script:
     - ./gradlew check
+
+build:
+  stage: publish
+  script:
+    - ./gradlew publish
+  artifacts:
+    paths:
+      - build/libs/*.jar
+    expire_in: 1 week
+  only:
+    - master

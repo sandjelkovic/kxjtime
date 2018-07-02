@@ -12,18 +12,20 @@ buildscript {
         jcenter()
     }
     dependencies {
-
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.dokka:dokka-gradle-plugin:${dokka_version}"
     }
 }
 
-group 'com.sandjelkovic'
-version '0.0.1-SNAPSHOT'
+group 'com.sandjelkovic.kxjtime'
+version '0.0.2-SNAPSHOT'
+
+ext.isReleaseVersion = !version.endsWith('SNAPSHOT')
 
 apply plugin: 'kotlin'
 apply plugin: 'org.jetbrains.dokka'
 apply plugin: 'maven-publish'
+apply plugin: 'signing'
 
 repositories {
     mavenCentral()
@@ -51,6 +53,7 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
+
 dokka {
     outputFormat = 'html'
     outputDirectory = "${project.buildDir}/dokkaHtml"
@@ -118,10 +121,20 @@ publishing {
     }
     repositories {
         maven {
-//            replace with real repos.
-            def releasesRepoUrl = "$buildDir/repos/releases"
-            def snapshotsRepoUrl = "$buildDir/repos/snapshots"
-            url version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+//            def releasesRepoUrl = "$buildDir/repos/releases"
+//            def snapshotsRepoUrl = "$buildDir/repos/snapshots"
+            credentials {
+                username "$ossrhUsername"
+                password "$ossrhPassword"
+            }
+            def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+            def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots/"
+            url project.ext.isReleaseVersion ? releasesRepoUrl : snapshotsRepoUrl
         }
     }
+}
+signing {
+    required { signatory != null && project.ext.isReleaseVersion }
+    sign publishing.publications.mavenJava
+    sign configurations.archives
 }

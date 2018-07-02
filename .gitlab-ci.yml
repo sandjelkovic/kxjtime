@@ -35,7 +35,7 @@ test:
 publish:
   stage: publish
   script:
-    - ./gradlew publish
+    - ./gradlew publish -PossrhUsername=${ossrhUsername} -PossrhPassword=${ossrhPassword}
   artifacts:
     paths:
       - build/libs/*.jar

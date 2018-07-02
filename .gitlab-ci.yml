@@ -6,6 +6,9 @@ stages:
   - test
   - publish
 
+variables:
+  OSSHR_SECRECTS: "-PossrhUsername=$ossrhUsername -PossrhPassword=$ossrhPassword"
+
 before_script:
 #  - echo `pwd` # debug
 #  - echo "$CI_BUILD_NAME, $CI_BUILD_REF_NAME $CI_BUILD_STAGE" # debug
@@ -35,7 +38,7 @@ test:
 publish:
   stage: publish
   script:
-    - ./gradlew publish -PossrhUsername=${ossrhUsername} -PossrhPassword=${ossrhPassword}
+    - ./gradlew publish $OSSHR_SECRECTS
   artifacts:
     paths:
       - build/libs/*.jar

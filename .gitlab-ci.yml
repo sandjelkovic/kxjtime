@@ -7,7 +7,7 @@ stages:
   - publish
 
 variables:
-  OSSHR_SECRECTS: "-PossrhUsername=$ossrhUsername -PossrhPassword=$ossrhPassword"
+  OSSHR_SECRETS: "-PossrhUsername=$ossrhUsername -PossrhPassword=$ossrhPassword"
 
 before_script:
 #  - echo `pwd` # debug
@@ -27,8 +27,6 @@ build:
     paths:
       - build/libs/*.jar
     expire_in: 1 week
-  only:
-    - master
 
 test:
   stage: test
@@ -38,7 +36,7 @@ test:
 publish:
   stage: publish
   script:
-    - ./gradlew publish $OSSHR_SECRECTS
+    - ./gradlew publish $OSSHR_SECRETS
   artifacts:
     paths:
       - build/libs/*.jar

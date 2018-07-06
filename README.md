@@ -1,4 +1,4 @@
-![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.sandjelkovic.kxjtime/kxjtime/badge.svg)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.sandjelkovic.kxjtime/kxjtime/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.sandjelkovic.kxjtime/kxjtime/)
 [![pipeline status](https://gitlab.com/sandjelkovic/kxjtime/badges/master/pipeline.svg)](https://gitlab.com/sandjelkovic/kxjtime/commits/master)
 
 # KxjTime

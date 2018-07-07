@@ -4,10 +4,10 @@
 # KxjTime
 KxjTime is a micro library that provides a convenient way to create [java.time API](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html) objects.
 
-### Usage
+## Usage
 Simplify creation of various objects from `java.time` API.
-##### Extensions for Integers and Longs 
-Create Durations from Integers
+#### Extensions for Integers and Longs 
+Create [Duration](https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html) from Integers
 ```kotlin
 val thirtyMinutes = 30.minutes
 val twoMilliseconds = 2.milliseconds
@@ -17,8 +17,8 @@ Which can be then combined by operators or with infix `and`
 val duration1 = 10.days + 1.hours + 5.minutes + 3.seconds
 val duration2 = 10.days and 1.hours and 5.minutes and 3.seconds
 ```
-##### Natural language 
-Combine Durations with Time-based classes 
+#### Natural language 
+Combine [Duration](https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html) with Time-based classes 
 ```kotlin
 val createdAt = 10.days and 1.hours and 5.minutes before ZonedDateTime.now()
 val willDoSomethingAt = 30.minutes + 10.seconds + 3.hours after Instant.now()

@@ -12,7 +12,7 @@ Create Durations from Integers
 val thirtyMinutes = 30.minutes
 val twoMilliseconds = 2.milliseconds
 ```
-Which can be then combined by operators or with infix `and`
+Which can be then combined by Kotlin overloaded operators or with infix `and`
 ```kotlin
 val duration1 = 10.days + 1.hours + 5.minutes + 3.seconds
 val duration2 = 10.days and 1.hours and 5.minutes and 3.seconds

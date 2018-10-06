@@ -1,5 +1,6 @@
 buildscript {
-    ext.kotlin_version = '1.2.41'
+    ext.kotlin_version = '1.2.71'
+    ext.kotlin_gradle_version = '1.2.71'
     ext.githost_url = "https://github.com/sandjelkovic/${rootProject.name}"
     ext.gitrepo_url = "github.com:sandjelkovic/${rootProject.name}.git"
 
@@ -12,13 +13,13 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_gradle_version"
         classpath "org.jetbrains.dokka:dokka-gradle-plugin:${dokka_version}"
     }
 }
 
 group 'com.sandjelkovic.kxjtime'
-version '0.0.2-SNAPSHOT'
+version '0.0.2'
 
 ext.isReleaseVersion = !version.endsWith('SNAPSHOT')
 
@@ -32,8 +33,7 @@ repositories {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-//    testRuntime("org.junit.platform:junit-platform-launcher:1.2.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation('org.junit.jupiter:junit-jupiter-api:5.2.0')
     testImplementation('org.junit.jupiter:junit-jupiter-params:5.2.0')
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.2.0')

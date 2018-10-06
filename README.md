@@ -1,5 +1,5 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.sandjelkovic.kxjtime/kxjtime/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.sandjelkovic.kxjtime/kxjtime/)
-[![pipeline status](https://gitlab.com/sandjelkovic/kxjtime/badges/master/pipeline.svg)](https://gitlab.com/sandjelkovic/kxjtime/commits/master)
+[![pipeline status](https://gitlab.com/sandjelkovic/kxjtime/badges/develop/pipeline.svg)](https://gitlab.com/sandjelkovic/kxjtime/commits/develop)
 
 # KxjTime
 KxjTime is a micro library that provides a convenient way to create [java.time API](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html) objects.
@@ -12,7 +12,7 @@ Create [Duration](https://docs.oracle.com/javase/8/docs/api/java/time/Duration.h
 val thirtyMinutes = 30.minutes
 val twoMilliseconds = 2.milliseconds
 ```
-Which can be then combined by operators or with infix `and`
+Which can be then combined by Kotlin overloaded operators or with infix `and`
 ```kotlin
 val duration1 = 10.days + 1.hours + 5.minutes + 3.seconds
 val duration2 = 10.days and 1.hours and 5.minutes and 3.seconds

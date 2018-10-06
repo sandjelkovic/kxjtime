@@ -12,7 +12,7 @@ import java.time.ZonedDateTime
 
 /**
  *  Returns a copy of this duration with the length negated.
- *  @return a {@code Duration} based on this duration
+ *  @return Negated {@code Duration} based on this duration
  *
  */
 operator fun Duration.unaryMinus(): Duration = this.negated()
@@ -30,7 +30,7 @@ infix fun Duration.before(zonedDateTime: ZonedDateTime): ZonedDateTime = zonedDa
 infix fun Duration.after(zonedDateTime: ZonedDateTime): ZonedDateTime = zonedDateTime.plus(this)
 
 /**
- * Add the Duration to Instant
+ * Subtract the Duration from Instant
  * @return Instant minus the Duration
  */
 infix fun Duration.before(instant: Instant): Instant = instant.minus(this)

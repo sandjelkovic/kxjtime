@@ -121,8 +121,6 @@ publishing {
     }
     repositories {
         maven {
-//            def releasesRepoUrl = "$buildDir/repos/releases"
-//            def snapshotsRepoUrl = "$buildDir/repos/snapshots"
             credentials {
                 username "$ossrhUsername"
                 password "$ossrhPassword"

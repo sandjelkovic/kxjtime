@@ -13,7 +13,7 @@ internal class ExamplesTests {
     fun `Example with multiple Durations and ZonedDateTimes combined`() {
         val now = ZonedDateTime.now()!!
 
-//        val createdAt = ZonedDateTime.now().minusDays(10).minusHours(1).minusMinutes(5)!!
+        // val createdAt = ZonedDateTime.now().minusDays(10).minusHours(1).minusMinutes(5)!!
         val createdAt = 10.days and 1.hours and 5.minutes before now
 
         // works with already overridden operators for Duration

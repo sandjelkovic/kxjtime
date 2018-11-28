@@ -56,7 +56,7 @@ compileTestKotlin {
 
 dokka {
     outputFormat = 'html'
-    outputDirectory = "${project.buildDir}/dokkaHtml"
+    outputDirectory = "${project.buildDir}/html"
 
     linkMapping {
         dir = rootProject.projectDir.absolutePath
@@ -69,6 +69,17 @@ dokka {
 task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
     outputFormat = "javadoc"
     outputDirectory = "${project.buildDir}/dokkaJavadoc"
+
+    linkMapping {
+        dir = rootProject.projectDir.absolutePath
+        url = "$githost_url/${dokka_sourceMapping}"
+        suffix = "#L"
+    }
+}
+
+task dokkaDocs(type: org.jetbrains.dokka.gradle.DokkaTask) {
+    outputFormat = "gfm"
+    outputDirectory = "${projectDir.absolutePath}/docs"
 
     linkMapping {
         dir = rootProject.projectDir.absolutePath

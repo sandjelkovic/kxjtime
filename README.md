@@ -1,6 +1,6 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.sandjelkovic.kxjtime/kxjtime/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.sandjelkovic.kxjtime/kxjtime/)
 [![pipeline status](https://gitlab.com/sandjelkovic/kxjtime/badges/develop/pipeline.svg)](https://gitlab.com/sandjelkovic/kxjtime/commits/develop)
-[![Build Status](https://travis-ci.org/sandjelkovic/kxjtime.svg?branch=master)](https://travis-ci.org/sandjelkovic/kxjtime)
+[![Build Status](https://travis-ci.com/sandjelkovic/kxjtime.svg?branch=master)](https://travis-ci.com/sandjelkovic/kxjtime)
 
 # KxjTime
 KxjTime is a micro library that provides a convenient way to create [java.time API](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html) objects.

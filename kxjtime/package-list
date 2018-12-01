@@ -1,0 +1,26 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:com.sandjelkovic.kxjtime$after(java.time.Duration, java.time.Instant)com.sandjelkovic.kxjtime/java.time.-duration/after.html
+$dokka.location:com.sandjelkovic.kxjtime$after(java.time.Duration, java.time.LocalDateTime)com.sandjelkovic.kxjtime/java.time.-duration/after.html
+$dokka.location:com.sandjelkovic.kxjtime$after(java.time.Duration, java.time.ZonedDateTime)com.sandjelkovic.kxjtime/java.time.-duration/after.html
+$dokka.location:com.sandjelkovic.kxjtime$and(java.time.Duration, java.time.Duration)com.sandjelkovic.kxjtime/java.time.-duration/and.html
+$dokka.location:com.sandjelkovic.kxjtime$before(java.time.Duration, java.time.Instant)com.sandjelkovic.kxjtime/java.time.-duration/before.html
+$dokka.location:com.sandjelkovic.kxjtime$before(java.time.Duration, java.time.LocalDateTime)com.sandjelkovic.kxjtime/java.time.-duration/before.html
+$dokka.location:com.sandjelkovic.kxjtime$before(java.time.Duration, java.time.ZonedDateTime)com.sandjelkovic.kxjtime/java.time.-duration/before.html
+$dokka.location:com.sandjelkovic.kxjtime$days#kotlin.Intcom.sandjelkovic.kxjtime/kotlin.-int/days.html
+$dokka.location:com.sandjelkovic.kxjtime$days#kotlin.Longcom.sandjelkovic.kxjtime/kotlin.-long/days.html
+$dokka.location:com.sandjelkovic.kxjtime$hours#kotlin.Intcom.sandjelkovic.kxjtime/kotlin.-int/hours.html
+$dokka.location:com.sandjelkovic.kxjtime$hours#kotlin.Longcom.sandjelkovic.kxjtime/kotlin.-long/hours.html
+$dokka.location:com.sandjelkovic.kxjtime$milliseconds#kotlin.Intcom.sandjelkovic.kxjtime/kotlin.-int/milliseconds.html
+$dokka.location:com.sandjelkovic.kxjtime$milliseconds#kotlin.Longcom.sandjelkovic.kxjtime/kotlin.-long/milliseconds.html
+$dokka.location:com.sandjelkovic.kxjtime$minutes#kotlin.Intcom.sandjelkovic.kxjtime/kotlin.-int/minutes.html
+$dokka.location:com.sandjelkovic.kxjtime$minutes#kotlin.Longcom.sandjelkovic.kxjtime/kotlin.-long/minutes.html
+$dokka.location:com.sandjelkovic.kxjtime$months#kotlin.Intcom.sandjelkovic.kxjtime/kotlin.-int/months.html
+$dokka.location:com.sandjelkovic.kxjtime$nanoseconds#kotlin.Intcom.sandjelkovic.kxjtime/kotlin.-int/nanoseconds.html
+$dokka.location:com.sandjelkovic.kxjtime$nanoseconds#kotlin.Longcom.sandjelkovic.kxjtime/kotlin.-long/nanoseconds.html
+$dokka.location:com.sandjelkovic.kxjtime$seconds#kotlin.Intcom.sandjelkovic.kxjtime/kotlin.-int/seconds.html
+$dokka.location:com.sandjelkovic.kxjtime$seconds#kotlin.Longcom.sandjelkovic.kxjtime/kotlin.-long/seconds.html
+$dokka.location:com.sandjelkovic.kxjtime$unaryMinus(java.time.Duration)com.sandjelkovic.kxjtime/java.time.-duration/unary-minus.html
+$dokka.location:com.sandjelkovic.kxjtime$weeks#kotlin.Intcom.sandjelkovic.kxjtime/kotlin.-int/weeks.html
+$dokka.location:com.sandjelkovic.kxjtime$years#kotlin.Intcom.sandjelkovic.kxjtime/kotlin.-int/years.html
+com.sandjelkovic.kxjtime

@@ -12,44 +12,43 @@ import java.time.ZonedDateTime
 
 /**
  *  Returns a copy of this duration with the length negated.
- *  @return Negated {@code Duration} based on this duration
- *
+ *  @return Negated {@code Duration} based on receiver duration
  */
 operator fun Duration.unaryMinus(): Duration = this.negated()
 
 /**
  * Subtract the Duration from ZonedDateTime
- * @return ZonedDateTime minus the Duration
+ * @return ZonedDateTime minus the receiver Duration
  */
 infix fun Duration.before(zonedDateTime: ZonedDateTime): ZonedDateTime = zonedDateTime.minus(this)
 
 /**
  * Add the Duration to ZonedDateTime
- * @return ZonedDateTime plus the Duration
+ * @return ZonedDateTime plus the receiver Duration
  */
 infix fun Duration.after(zonedDateTime: ZonedDateTime): ZonedDateTime = zonedDateTime.plus(this)
 
 /**
  * Subtract the Duration from Instant
- * @return Instant minus the Duration
+ * @return Instant minus the receiver Duration
  */
 infix fun Duration.before(instant: Instant): Instant = instant.minus(this)
 
 /**
  * Add the Duration to Instant
- * @return Instant plus the Duration
+ * @return Instant plus the receiver Duration
  */
 infix fun Duration.after(instant: Instant): Instant = instant.plus(this)
 
 /**
  * Subtract the Duration from LocalDateTime
- * @return LocalDateTime minus the Duration
+ * @return LocalDateTime minus the receiver Duration
  */
 infix fun Duration.before(time: LocalDateTime): LocalDateTime = time.minus(this)
 
 /**
  * Add the Duration to LocalDateTime
- * @return LocalDateTime plus the Duration
+ * @return LocalDateTime plus the receiver Duration
  */
 infix fun Duration.after(time: LocalDateTime): LocalDateTime = time.plus(this)
 

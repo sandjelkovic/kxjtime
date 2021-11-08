@@ -33,3 +33,6 @@ if (now.isAfter(12.hours after scheduledTime)) {
     // do something later
 }
 ```
+
+## Deprecation note
+With the recent releases of Kotlin time library this library is not needed anymore if you use newer Kotlin versions
